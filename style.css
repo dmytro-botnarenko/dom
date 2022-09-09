@@ -1,0 +1,38 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  background-color: white;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  color: #fff;
+  font-size: calc(12px + 0.39vw);
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+a {
+  color: #794f45;
+  text-decoration: none;
+}
+
+a, li, nav, span {
+    border: solid 1px;
+}
+nav {
+    border-color: red;
+}
+a {
+    border-color: blue;
+}
+li {
+    border-color: yellow;
+}
+span {
+    border-color: green;
+}
