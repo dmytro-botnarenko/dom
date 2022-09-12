@@ -17,22 +17,49 @@ body {
   letter-spacing: 0.05em;
 }
 a {
-  color: #794f45;
   text-decoration: none;
 }
-
-a, li, nav, span {
+a, li, nav, span, main, footer, header, .toggler {
     border: solid 1px;
+    color: black;
 }
-nav {
+main, footer, header {
+    border-color: black;
+}
+nav, .toggler {
     border-color: red;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 a {
     border-color: blue;
 }
 li {
     border-color: yellow;
+    list-style: none;
 }
-span {
+/* span {
     border-color: green;
+} */
+/* ------------------------------- */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* ------------HEADER--------------- */
+header {
+  /* flex-basis: 20%; */
+}
+.navigation {
+  /* position: absolute;
+  top: 0; */
+}
+
+/* -------------MAIN------------- */
+main {
+  flex: 1 1 auto;
 }
