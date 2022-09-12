@@ -19,8 +19,8 @@ body {
 a {
   text-decoration: none;
 }
-a, li, nav, span, main, footer, header, .toggler {
-    border: solid 1px;
+a, li, nav, span, main, footer, header, .toggler, .main__wrapper {
+    border: solid 2px;
     color: black;
 }
 main, footer, header {
@@ -54,12 +54,31 @@ li {
 header {
   /* flex-basis: 20%; */
 }
-.navigation {
-  /* position: absolute;
-  top: 0; */
-}
-
 /* -------------MAIN------------- */
+.main__wrapper {
+  flex: 1 1 auto;
+  display: flex;
+}
 main {
   flex: 1 1 auto;
+  /* display: flex; */
+}
+/* ------------NAVIGATION--------------- */
+.navigation {
+  position: absolute;
+  top: 0;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-color: pink;
+  }
+  .navigation {
+    position: inherit;
+    width: 30%;
+  }
+  main {
+    width: 70%;
+    flex: 1 0 auto;
+  }
 }
