@@ -75,6 +75,12 @@ main {
 }
 .main__container__navigation__list {
 }
+.main__container__navigation__menu input,
+/* .main__container__navigation__menu span  */
+{
+  display: none;
+}
+
 
 @media screen and (max-width: 800px) {
   body {
@@ -94,10 +100,56 @@ main {
     transform: translate(30%, 0);
     transition: transform 0.5s;
   }
+  .main__container__navigation__menu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 2;
+  }
   .main__container__navigation__menu input:checked ~ .main__container__navigation__list {
     transform: translate(-80%, 0);
   }
-  main {
+  /*Just a quick hamburger*/
+  .main__container__navigation__menu span
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    background: #cdcdcd;
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s,
+                background 0.5s,
+                opacity 0.55s;
+  }
+.main__container__navigation__menu span:first-child {
+    transform-origin: 0% 0%;
+  }
+.main__container__navigation__menu span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  /*Transform all the slices of hamburger into a crossmark*/
+.main__container__navigation__menu input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  /*But let's hide the middle one.*/
+.main__container__navigation__menu input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  /*Ohyeah and the last one should go the other direction*/
+.main__container__navigation__menu input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+main {
     flex: 1 1 auto;
   }
 }
