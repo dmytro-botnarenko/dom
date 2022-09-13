@@ -20,14 +20,16 @@ body {
 a {
   text-decoration: none;
 }
-a, li, nav, span, main, footer, header, .toggler, .main__container {
+a, li, span, main, footer, header,
+.main__container, .main__info__name, .main__info__personage,
+td, th {
     border: solid 2px;
     color: black;
 }
 main, footer, header {
     border-color: black;
 }
-nav, .toggler {
+nav {
     border-color: red;
     user-select: none;
     -moz-user-select: none;
@@ -62,9 +64,11 @@ header {
   display: flex;
   position: relative;
 }
-main {
+.main__info {
   width: 70%;
   flex: 1 0 auto;
+  display: flex;
+  padding: 5%;
 }
 /* ------------NAVIGATION--------------- */
 .main__container__navigation {
@@ -82,7 +86,7 @@ main {
 }
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 460px) {
   body {
     background-color: pink;
   }
@@ -108,9 +112,9 @@ main {
     z-index: 2;
   }
   .main__container__navigation__menu input:checked ~ .main__container__navigation__list {
-    transform: translate(-80%, 0);
+    transform: translate(-75%, 0);
   }
-  /*Just a quick hamburger*/
+  /*Hamburger*/
   .main__container__navigation__menu span
   {
     display: block;
@@ -144,12 +148,27 @@ main {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
-  /*Ohyeah and the last one should go the other direction*/
+  /*last one should go the other direction*/
 .main__container__navigation__menu input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px);
   }
 
-main {
+.main__info {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+.main__info__personage {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.main__info__personage img {
+    border: 1px solid gray;
+    width: 50%;
+    /* height: 30%; */
   }
 }
