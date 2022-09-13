@@ -15,11 +15,12 @@ body {
   font-size: calc(12px + 0.39vw);
   line-height: 24px;
   letter-spacing: 0.05em;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
 }
-a, li, nav, span, main, footer, header, .toggler, .main__wrapper {
+a, li, nav, span, main, footer, header, .toggler, .main__container {
     border: solid 2px;
     color: black;
 }
@@ -34,6 +35,7 @@ nav, .toggler {
 }
 a {
     border-color: blue;
+    display: block;
 }
 li {
     border-color: yellow;
@@ -55,30 +57,47 @@ header {
   /* flex-basis: 20%; */
 }
 /* -------------MAIN------------- */
-.main__wrapper {
+.main__container {
   flex: 1 1 auto;
   display: flex;
+  position: relative;
 }
 main {
-  flex: 1 1 auto;
-  /* display: flex; */
+  width: 70%;
+  flex: 1 0 auto;
 }
 /* ------------NAVIGATION--------------- */
-.navigation {
-  position: absolute;
-  top: 0;
+.main__container__navigation {
+  width: 30%;
+}
+.main__container__navigation__menu input {
+  /* display: none; */
+}
+.main__container__navigation__list {
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (max-width: 800px) {
   body {
     background-color: pink;
   }
-  .navigation {
-    position: inherit;
-    width: 30%;
+  .main__container__navigation {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    width: 50%;
+  }
+  .main__container__navigation__list {
+    position: absolute;
+    width: 300px;
+    padding: 50px;
+    background-color: rgb(150, 150, 150);
+    transform: translate(30%, 0);
+    transition: transform 0.5s;
+  }
+  .main__container__navigation__menu input:checked ~ .main__container__navigation__list {
+    transform: translate(-80%, 0);
   }
   main {
-    width: 70%;
-    flex: 1 0 auto;
+    flex: 1 1 auto;
   }
 }
