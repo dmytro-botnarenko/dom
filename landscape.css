@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px) and (orientation: landscape) {
+@media screen and (max-width: 915px) and (orientation: landscape) {
   body {
     background-color: crimson;
   }
@@ -14,9 +14,9 @@
   }
   .main__navigation__menu__list {
     position: absolute;
-    top: -25px;
+    top: 0px;
     width: 300px;
-    padding: 20px;
+    padding: 20% 5%;
     background-color: rgb(150, 150, 150);
     transform: translate(30%, 0);
     transition: transform 0.5s;
@@ -92,23 +92,20 @@
     justify-content: space-around;
     width: 50%;
 }
-.main__info__personage img {
-    border: 1px solid gray;
-    width: 40%;
-  }
 .main__info__name {
     width: 60%;
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 3%;
   }
 .main__info__image{
-  margin-top: 1%;
+  border: 1px solid gray;
+  width: 40%;
 }
 .main__info__personage table {
   width: 50%;
 }
 .main__info__text {
     width: 45%;
-    margin-top: 1%;
+    padding: 0 1% 0 0;
   }
 }
