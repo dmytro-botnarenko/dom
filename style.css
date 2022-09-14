@@ -56,19 +56,18 @@ li {
 
 /* ------------HEADER--------------- */
 header {
-  /* flex-basis: 20%; */
+
 }
 /* -------------MAIN------------- */
 .main__container {
   flex: 1 1 auto;
   display: flex;
+  
   position: relative;
 }
 .main__info {
-  width: 70%;
-  /* flex: 1 0 auto; */
   display: flex;
-  padding: 2%;
+  /* padding: 2%; */
 }
 /* ------------NAVIGATION--------------- */
 .main__navigation {
@@ -89,5 +88,5 @@ header {
 }
 /* -----------table---------------- */
 th, td {
-  padding: 5px 10px;
+  padding: 1% 1%;
 }
