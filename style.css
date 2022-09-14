@@ -11,7 +11,7 @@ body {
   height: 100%;
   background-color: white;
   font-family: Tahoma, Helvetica, Arial, sans-serif;
-  color: #fff;
+  /* color: #fff; */
   font-size: calc(12px + 0.39vw);
   line-height: 24px;
   letter-spacing: 0.05em;
@@ -20,14 +20,16 @@ body {
 a {
   text-decoration: none;
 }
-a, li, span, main, footer, header,
-.main__container, .main__info__name, .main__info__personage,
-td, th {
-    border: solid 2px;
-    color: black;
+a, li, main, footer, header,
+.main__container, .main__info__name, .main__info__personage {
+    border: solid 1px;
+    /* color: black; */
 }
 main, footer, header {
     border-color: black;
+}
+footer {
+  text-align: center;
 }
 nav {
     border-color: red;
@@ -62,7 +64,7 @@ header {
 .main__container {
   flex: 1 1 auto;
   display: flex;
-  
+
   position: relative;
 }
 .main__info {
@@ -88,5 +90,7 @@ header {
 }
 /* -----------table---------------- */
 th, td {
-  padding: 1% 1%;
+  /* padding: 1% 1%; */
+  border: solid 1px;
+  text-align: center;
 }

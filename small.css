@@ -39,6 +39,7 @@
     height: 4px;
     margin-bottom: 5px;
     border-radius: 3px;
+    border: solid 2px;
     position: relative;
     z-index: 1;
     background: #cdcdcd;
@@ -72,29 +73,32 @@
   }
 
 .main__info {
-    /* flex: 1 1 auto; */
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
   }
+  .main__info__name {
+      flex: 0 1 auto;
+      padding: 3% 0;
+    }
 .main__info__personage {
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
-.main__info__personage img {
-    border: 1px solid gray;
-    width: 50%;
-    /* height: 30%; */
-  }
-.main__info__name {
-    margin-bottom: 3%;
-  }
 .main__info__image{
-  margin-top: 3%;
+  border: 1px solid gray;
+  width: 50%;
+  /* max-height: 60%; */
+  /* margin-top: 3%; */
+}
+.main__info__personage table {
+  width: 80%;
 }
 .main__info__text {
-    margin-top: 3%;
+    /* flex: 1 1 auto; */
+    padding: 3%;
   }
 }

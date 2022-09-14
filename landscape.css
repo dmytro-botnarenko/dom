@@ -43,6 +43,7 @@
     width: 33px;
     height: 4px;
     margin-bottom: 5px;
+    border: solid 2px;
     border-radius: 3px;
     position: relative;
     z-index: 1;
