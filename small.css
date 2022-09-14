@@ -8,7 +8,7 @@
     left: 90%;
     width: 50%;
   }
-  .main__container__navigation__list {
+  .main__navigation__menu__list {
     position: absolute;
     width: 300px;
     padding: 50px;
@@ -28,7 +28,7 @@
     appearance: none;
     /* opacity: 0.5; */
   }
-  .main__navigation__menu input:checked ~ .main__container__navigation__list {
+  .main__navigation__menu input:checked ~ .main__navigation__menu__list {
     transform: translate(-75%, 0);
   }
   /*Hamburger*/
