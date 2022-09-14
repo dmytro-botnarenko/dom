@@ -20,7 +20,7 @@ body {
 a {
   text-decoration: none;
 }
-a, li, main, footer, header,
+main, footer, header,
 .main__container, .main__info__name, .main__info__personage {
     border: solid 1px;
     /* color: black; */
@@ -37,17 +37,15 @@ nav {
     -moz-user-select: none;
     -webkit-user-select: none;
 }
-a {
-    border-color: blue;
+.main__navigation__menu__list__link {
+    /* border-color: blue; */
     display: block;
+
 }
-li {
-    border-color: yellow;
+.main__navigation__menu__list__link__item {
+    /* border-color: yellow; */
     list-style: none;
 }
-/* span {
-    border-color: green;
-} */
 /* ------------------------------- */
 .wrapper {
   display: flex;
@@ -64,12 +62,10 @@ header {
 .main__container {
   flex: 1 1 auto;
   display: flex;
-
   position: relative;
 }
 .main__info {
   display: flex;
-  /* padding: 2%; */
 }
 /* ------------NAVIGATION--------------- */
 .main__navigation {
@@ -83,6 +79,17 @@ header {
 }
 .main__navigation__menu__list {
 
+}
+.main__navigation__menu__list h2,
+.main__navigation__menu__list__link {
+  margin-bottom: 20px;
+  color: rgb(100, 100, 100);
+}
+.main__navigation__menu__list h2 {
+  text-transform: uppercase;
+}
+.main__navigation__menu__list__link:hover {
+  color: black;
 }
 .main__navigation__menu input,
 .main__navigation__menu span {
