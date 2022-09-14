@@ -2,4 +2,28 @@
   body {
     background-color: olive;
   }
+  .main__navigation {
+    width: 25%;
+  }
+  .main__info {
+    /* flex: 1 1 auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    }
+  .main__info__name {
+
+  }
+  .main__info__personage {
+      /* flex: 1 1 auto; */
+      display: flex;
+      justify-content: space-around;
+
+  }
+  .main__info__image {
+      border: 1px solid gray;
+      /* width: 30%; */
+      max-width: 50%;
+    }
 }

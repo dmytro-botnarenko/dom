@@ -1,0 +1,35 @@
+@media screen and (min-width: 1025px) {
+  body {
+    background-color: violet;
+  }
+  .main__navigation {
+    width: 25%;
+  }
+  .main__info {
+    /* flex: 1 0 auto; */
+    display: flex;
+    flex-wrap: wrap;
+    /* align-items: center;
+    justify-content: space-between; */
+    padding: 10px;
+    }
+    .main__info__name {
+      flex-grow: 1;
+      text-align: center;
+      margin: 2% 0 0 0;
+    }
+    .main__info__personage {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .main__info__image {
+      /* max-height: 70%; */
+      max-width: 40%;
+      align-self: center;
+    }
+    .main__info__text {
+      column-count: 2;
+    }
+}

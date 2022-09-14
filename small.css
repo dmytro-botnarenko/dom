@@ -2,7 +2,7 @@
   body {
     background-color: pink;
   }
-  .main__container__navigation {
+  .main__navigation {
     position: absolute;
     top: 0;
     left: 90%;
@@ -16,18 +16,23 @@
     transform: translate(30%, 0);
     transition: transform 0.5s;
   }
-  .main__container__navigation__menu input {
+  .main__navigation__menu input {
     display: block;
     width: 40px;
     height: 32px;
     cursor: pointer;
     z-index: 2;
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    appearance: none;
+    /* opacity: 0.5; */
   }
-  .main__container__navigation__menu input:checked ~ .main__container__navigation__list {
+  .main__navigation__menu input:checked ~ .main__container__navigation__list {
     transform: translate(-75%, 0);
   }
   /*Hamburger*/
-  .main__container__navigation__menu span
+  .main__navigation__menu span
   {
     display: block;
     width: 33px;
@@ -38,30 +43,31 @@
     z-index: 1;
     background: #cdcdcd;
     transform-origin: 4px 0px;
-
+    top: 13px;
+    left: -11px;
     transition: transform 0.5s,
                 background 0.5s,
                 opacity 0.55s;
   }
-.main__container__navigation__menu span:first-child {
+.main__navigation__menu span:first-child {
     transform-origin: 0% 0%;
   }
-.main__container__navigation__menu span:nth-last-child(2) {
+.main__navigation__menu span:nth-of-type(3) {
     transform-origin: 0% 100%;
   }
   /*Transform all the slices of hamburger into a crossmark*/
-.main__container__navigation__menu input:checked ~ span {
+.main__navigation__menu input:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #232323;
   }
   /*But let's hide the middle one.*/
-.main__container__navigation__menu input:checked ~ span:nth-last-child(3) {
+.main__navigation__menu input:checked ~ span:nth-of-type(2) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
   /*last one should go the other direction*/
-.main__container__navigation__menu input:checked ~ span:nth-last-child(2) {
+.main__navigation__menu input:checked ~ span:nth-of-type(3) {
     transform: rotate(-45deg) translate(0, -1px);
   }
 
