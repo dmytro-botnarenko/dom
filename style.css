@@ -9,13 +9,13 @@
 html,
 body {
   height: 100%;
-  background-color: white;
   font-family: Tahoma, Helvetica, Arial, sans-serif;
   /* color: #fff; */
   font-size: calc(12px + 0.39vw);
   line-height: 24px;
   letter-spacing: 0.05em;
   overflow-x: hidden;
+  background-color: #FDE988;
 }
 a {
   text-decoration: none;
@@ -32,7 +32,6 @@ footer {
   text-align: center;
 }
 nav {
-    border-color: red;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -83,18 +82,17 @@ header {
 
 }
 .main__navigation__menu__list {
-
 }
 .main__navigation__menu__list h2,
 .main__navigation__menu__list__link {
-  margin-bottom: 20px;
-  color: rgb(100, 100, 100);
+  margin-bottom: 10%;
+  color: black;
 }
 .main__navigation__menu__list h2 {
   text-transform: uppercase;
 }
 .main__navigation__menu__list__link:hover {
-  color: black;
+  color: rgb(241, 205, 133);
 }
 .main__navigation__menu input,
 .main__navigation__menu span {

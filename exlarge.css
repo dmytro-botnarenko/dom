@@ -1,6 +1,6 @@
 @media screen and (min-width: 1025px) {
   body {
-    background-color: violet;
+    /* background-color: violet; */
   }
   .main__navigation {
     width: 25%;
