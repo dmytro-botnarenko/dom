@@ -76,10 +76,8 @@ header {
   display: flex;
 }
 .main__navigation__image {
-  /* border: 1px solid gray; */
   border-radius: 50%;
   max-width: 80%;
-  /* display: block; */
 }
 .main__navigation__menu {
 

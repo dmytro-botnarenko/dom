@@ -11,11 +11,9 @@
     position: absolute;
     top: 0;
     left: 90%;
+    display: block;
   }
   .main__navigation__image {
-    /* border: 1px solid gray; */
-    /* border-radius: 50%; */
-    /* max-width: 10%; */
     display: none;
   }
   .main__navigation__menu__list {
@@ -121,6 +119,7 @@
     width: 60%;
     text-align: center;
     margin-bottom: 0;
+    font-size: 2em;
   }
 .main__info__image{
   border: 1px solid gray;
