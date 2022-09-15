@@ -2,12 +2,24 @@
   body {
     /* background-color: lime; */
   }
+  /* ------------SWITCHER--------------- */
+  .header__switcher {
+    /* border: 1px solid black; */
+    /* display: inline-block; */
+    width: 5%;
+    top: 15px;
+    left: 15px;
+  }
+  /* ------------NAVIGATION--------------- */
   .main__navigation {
     /* flex: 1 0 auto; */
     flex-direction: column;
     align-items: center;
     height: 90%;
     justify-content: space-around;
+  }
+  .main__navigation__menu {
+    width: 85%;
   }
   .main__navigation__menu__list {
     padding: 10% 2% 1% 2%;
@@ -21,6 +33,7 @@
   .main__navigation__menu__list__link {
 
   }
+  /* ------------MAIN--------------- */
   .main__info {
       flex: 1 1 auto;
       width: 70%;
@@ -40,7 +53,7 @@
   .main__info__image {
       margin-top: 3%;
       margin-bottom: 3%;
-      border: 1px solid gray;
+      /* border: 1px solid gray; */
       width: 50%;
     }
   .main__info__text {

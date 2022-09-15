@@ -20,13 +20,12 @@ body {
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 main, footer, header,
 .main__container, .main__info__name, .main__info__personage {
-    border: solid 1px;
-    /* color: black; */
-}
-main, footer, header {
-    border-color: black;
+    /* border: solid 1px; */
 }
 footer {
   text-align: center;
@@ -37,13 +36,11 @@ nav {
     -webkit-user-select: none;
 }
 .main__navigation__menu__list__link {
-    /* border-color: blue; */
     display: block;
+    /* border: 1px dashed black; */
+    border-radius: 10%;
 
-}
-.main__navigation__menu__list__link__item {
-    /* border-color: yellow; */
-    list-style: none;
+    background-color: #D64300;
 }
 /* ------------------------------- */
 .wrapper {
@@ -51,11 +48,17 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  position: relative;
 }
 
-/* ------------HEADER--------------- */
-header {
-
+/* ------------SWITCHER--------------- */
+.header__switcher {
+  cursor: pointer;
+  background-color: #FDE988;
+  position: absolute;
+}
+.header__switcher__image {
+  /* width: 7%; */
 }
 /* -------------MAIN------------- */
 .main__container {
@@ -65,6 +68,21 @@ header {
 }
 .main__info {
   display: flex;
+}
+.main__info__text {
+  text-align: justify;
+}
+.main__info__strip {
+  display: none;
+}
+/* -----------TABLE---------------- */
+th, td {
+  /* padding: 1% 1%; */
+  border: solid 1px;
+  text-align: center;
+}
+.main__info__personage table {
+  width: 80%;
 }
 /* ------------NAVIGATION--------------- */
 .main__navigation {
@@ -87,6 +105,7 @@ header {
 .main__navigation__menu__list__link {
   margin-bottom: 10%;
   color: black;
+  transition: color 0.3s ease;
 }
 .main__navigation__menu__list h2 {
   text-transform: uppercase;
@@ -97,13 +116,4 @@ header {
 .main__navigation__menu input,
 .main__navigation__menu span {
   display: none;
-}
-/* -----------table---------------- */
-th, td {
-  /* padding: 1% 1%; */
-  border: solid 1px;
-  text-align: center;
-}
-.main__info__personage table {
-  width: 80%;
 }
