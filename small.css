@@ -8,6 +8,9 @@
     left: 90%;
     width: 50%;
   }
+  .main__navigation__image {
+    display: none;
+  }
   .main__navigation__menu__list {
     position: absolute;
     top: 0;

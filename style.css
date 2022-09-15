@@ -73,6 +73,13 @@ header {
   align-self: center;
   text-align: center;
   margin: 0 auto;
+  display: flex;
+}
+.main__navigation__image {
+  /* border: 1px solid gray; */
+  border-radius: 50%;
+  max-width: 80%;
+  /* display: block; */
 }
 .main__navigation__menu {
 
@@ -100,4 +107,7 @@ th, td {
   /* padding: 1% 1%; */
   border: solid 1px;
   text-align: center;
+}
+.main__info__personage table {
+  width: 80%;
 }

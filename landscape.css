@@ -1,6 +1,6 @@
 @media screen and (max-width: 915px) and (orientation: landscape) {
   body {
-    /* background-color: crimson; */
+    background-color: crimson;
   }
   .main__container {
     display: flex;
@@ -11,6 +11,12 @@
     position: absolute;
     top: 0;
     left: 90%;
+  }
+  .main__navigation__image {
+    /* border: 1px solid gray; */
+    /* border-radius: 50%; */
+    /* max-width: 10%; */
+    display: none;
   }
   .main__navigation__menu__list {
     position: absolute;
@@ -100,6 +106,7 @@
     flex-wrap: wrap;
     flex: 1 1 auto;
     width: 70%;
+    height: 100%;
   }
 
 .main__info__personage {
