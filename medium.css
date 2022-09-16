@@ -1,4 +1,4 @@
-@media screen and (min-width: 461px) and (max-width: 768px) {
+@media screen and (min-width: 461px) and (max-width: 768px) and (not (orientation: landscape)) {
   body {
     /* background-color: lime; */
   }
@@ -23,7 +23,7 @@
   }
   .main__navigation__menu__list {
     padding: 10% 2% 1% 2%;
-    background-color: rgb(155, 15, 2);
+    background-color: rgb(244, 165, 148);
     border-radius: 5px;
   }
   .main__navigation__menu__list__link {

@@ -20,7 +20,7 @@
   }
   .main__navigation__menu__list {
     position: absolute;
-    top: 0;
+    top: 45px;
     width: 300px;
     padding: 50px 50px;
     background-color: rgba(244, 165, 148, 0.95);
@@ -29,7 +29,7 @@
     transition: transform 0.5s;
   }
   .main__navigation__menu__list__link {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   .main__navigation__menu input {
     display: block;
@@ -59,6 +59,7 @@
     position: relative;
     z-index: 1;
     color: black;
+    background-color: black;
     transform-origin: 4px 0px;
     top: 13px;
     left: -11px;
@@ -74,7 +75,7 @@
   /*Transform all the slices of hamburger into a crossmark*/
 .main__navigation__menu input:checked ~ .main__navigation__menu__burger {
     opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
+    transform: rotate(45deg) translate(0px, 0px);
   }
   /*But let's hide the middle one.*/
 .main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(2) {
@@ -83,7 +84,7 @@
   }
   /*last one should go the other direction*/
 .main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
-    transform: rotate(-45deg) translate(0, -1px);
+    transform: rotate(-45deg) translate(0px, 2px);
   }
 /* ------------MAIN--------------- */
 .main__info {
