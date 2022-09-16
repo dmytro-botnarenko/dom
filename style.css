@@ -6,8 +6,8 @@
   border: 0;
   box-sizing: border-box;
 }
-html,
-body {
+
+html, body {
   height: 100%;
   font-family: Tahoma, Helvetica, Arial, sans-serif;
   /* color: #fff; */
@@ -15,7 +15,7 @@ body {
   line-height: 24px;
   letter-spacing: 0.05em;
   overflow-x: hidden;
-  background-color: #FDE988;
+  background-color: rgb(252, 233, 136);
 }
 a {
   text-decoration: none;
@@ -37,10 +37,8 @@ nav {
 }
 .main__navigation__menu__list__link {
     display: block;
-    /* border: 1px dashed black; */
-    border-radius: 10%;
-
-    background-color: #D64300;
+    border-radius: 5%;
+    background-color: rgb(157, 36, 58);
 }
 /* ------------------------------- */
 .wrapper {
@@ -52,13 +50,21 @@ nav {
 }
 
 /* ------------SWITCHER--------------- */
-.header__switcher {
+.switcher {
   cursor: pointer;
-  background-color: #FDE988;
+  background-color: rgb(252, 233, 136);
   position: absolute;
+  /* border: 1px solid black; */
+  /* width: 40px;
+  height: 40px; */
+  /* background-image: url("./img/sun-icon.svg");
+  background-size: cover; */
+  z-index: 10;
+  -webkit-tap-highlight-color: transparent;
 }
-.header__switcher__image {
-  /* width: 7%; */
+.switcher__image {
+  max-width: 100%;
+  /* -webkit-tap-highlight-color: red; */
 }
 /* -------------MAIN------------- */
 .main__container {
@@ -106,14 +112,15 @@ th, td {
   margin-bottom: 10%;
   color: black;
   transition: color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 .main__navigation__menu__list h2 {
   text-transform: uppercase;
 }
 .main__navigation__menu__list__link:hover {
-  color: rgb(241, 205, 133);
+  color: rgb(252, 233, 136);
 }
 .main__navigation__menu input,
-.main__navigation__menu span {
+.main__navigation__menu__burger {
   display: none;
 }

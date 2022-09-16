@@ -8,7 +8,7 @@
     align-items: center;
   }
   /* ------------SWITCHER--------------- */
-  .header__switcher {
+  .switcher {
     /* border: 1px solid black; */
     /* display: inline-block; */
     width: 4%;
@@ -31,7 +31,7 @@
     width: 380px;
     padding: 15% 2%;
     border-radius: 5px;
-    background-color: rgba(155, 15, 2, 1);
+    background-color: rgba(244, 165, 148, 0.95);
     transform: translate(30%, 0);
     transition: transform 0.5s;
 
@@ -60,13 +60,14 @@
     top: 7px;
     left: 0;
     appearance: none;
+    -webkit-tap-highlight-color: transparent;
     /* opacity: 0.5; */
   }
   .main__navigation__menu input:checked ~ .main__navigation__menu__list {
     transform: translate(-79%, 0);
   }
   /*Hamburger*/
-  .main__navigation__menu span
+  .main__navigation__menu__burger
   {
     display: block;
     width: 33px;
@@ -83,26 +84,24 @@
     transition: transform 0.5s,
                 opacity 0.55s;
   }
-.main__navigation__menu span:first-child {
+.main__navigation__menu__burger:first-child {
     transform-origin: 0% 0%;
   }
-.main__navigation__menu span:nth-of-type(3) {
+.main__navigation__menu__burger:nth-of-type(3) {
     transform-origin: 0% 100%;
   }
   /*Transform all the slices of hamburger into a crossmark*/
-.main__navigation__menu input:checked ~ span {
+.main__navigation__menu input:checked ~ .main__navigation__menu__burger {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #FDE988;
-    color: #FDE988;
   }
   /*But let's hide the middle one.*/
-.main__navigation__menu input:checked ~ span:nth-of-type(2) {
+.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(2) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
   /*last one should go the other direction*/
-.main__navigation__menu input:checked ~ span:nth-of-type(3) {
+.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
     transform: rotate(-45deg) translate(0, -1px);
   }
 

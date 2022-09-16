@@ -10,11 +10,16 @@
     <link rel="stylesheet" href="large.css">
     <link rel="stylesheet" href="exlarge.css">
     <link rel="stylesheet" href="landscape.css">
+    <link rel="stylesheet" href="modes.css">
     <title>Tom&Jerry Dom project</title>
 </head>
 <body>
     <div class="wrapper">
-        <button class="header__switcher" type="button"><img class="header__switcher__image" src="./img/sun-icon.svg" alt="Ligth mode switcher"></button>
+        <button class="switcher" type="button">
+          <img class="switcher__image"
+               src="./img/sun-icon.svg"
+               alt="Light mode switcher">
+        </button>
         <div class="main__container">
             <main class="main__info">
                 <h1 class="main__info__name">Character Name</h1>
@@ -66,9 +71,9 @@
               </a>
                 <div class="main__navigation__menu">
                     <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <span class="main__navigation__menu__burger"></span>
+                    <span class="main__navigation__menu__burger"></span>
+                    <span class="main__navigation__menu__burger"></span>
                     <ul class="main__navigation__menu__list">
                         <h2>Characters</h2>
                         <li>
@@ -103,5 +108,6 @@
             <p>FOOTER Some copyright information</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

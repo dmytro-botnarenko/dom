@@ -1,0 +1,11 @@
+.dark-mode {
+  background-color: #9C0F02;
+  color: rgb(192, 192, 192);
+  /* color: white; */
+}
+.antidark-mode {
+  background-color: rgba(244, 165, 148, 0.95);
+}
+.dark-burger-mode {
+  color: rgb(252, 233, 136);
+}
