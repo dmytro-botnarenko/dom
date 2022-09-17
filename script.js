@@ -3,7 +3,7 @@ const body = document.body;
 const modeSwitcher = document.querySelector('.switcher');
 const modeSwitcherImage = document.querySelector('.switcher__image');
 const menu = document.querySelector('.main__navigation__menu__list');
-const modeImages = ["img/sun-icon.svg", "img/moon-icon-fde988.svg"];
+const modeImages = ["img/moon-icon.svg", "img/sun-icon.svg"];
 const burger = document.querySelectorAll('.main__navigation__menu__burger');
 let modeCounter = 0;
 
