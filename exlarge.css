@@ -12,7 +12,6 @@
   }
   /* ------------NAVIGATION--------------- */
   .main__navigation {
-    width: 25%;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -81,7 +80,17 @@
       }
 }
 
+
 @media screen and (min-width: 1600px) {
+  .wrapper {
+    padding: 2%;
+  }
+  .switcher {
+    width: 3%;
+    top: 4%;
+    left: 3%;
+  }
+
   .main__info__strip {
     display: flex;
     flex: 1 1 auto;

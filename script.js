@@ -134,4 +134,3 @@ const characters = [{
         text: 'Toodles Galore (also known as Toots in Tom and Jerry in New York) is a character in the Tom and Jerry series. She has white fur, wears a neck ribbon, and is considered attractive by other characters. Prior to her debut in the Tom and Jerry short Springtime for Thomas (1946), a white female cat resembling a prototype version of Toodles previously appeared (alongside a black alley cat resembling a prototype version of Butch Cat) in the one-shot MGM cartoon The Alley Cat (1941) directed by Hugh Harman. A character model sheet for the short refers to her as "The Lady Cat".'
     }
 ]
-//By MGM - MGM, Fair use, https://en.wikipedia.org/w/index.php?curid=39715074
