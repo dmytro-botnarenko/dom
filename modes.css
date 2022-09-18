@@ -10,3 +10,7 @@
   color: rgb(252, 233, 136);
   background-color: rgb(252, 233, 136);
 }
+
+.highlight {
+  font-weight: bold;
+}

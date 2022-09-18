@@ -1,3 +1,5 @@
+"use strict";
+
 const rootElement = document.documentElement;
 const body = document.body;
 const modeSwitcher = document.querySelector('.switcher');
@@ -5,7 +7,13 @@ const modeSwitcherImage = document.querySelector('.switcher__image');
 const menu = document.querySelector('.main__navigation__menu__list');
 const modeImages = ["img/moon-icon.svg", "img/sun-icon.svg"];
 const burger = document.querySelectorAll('.main__navigation__menu__burger');
+const table = document.querySelector('table');
+const mainName = document.querySelector('.main__info__name');
+const mainImage = document.querySelector('.main__info__image');
+let selectedA;
+let characterId;
 let modeCounter = 0;
+let chosen;
 
 function changeModeImg() {
     modeCounter = (modeCounter + 1) % modeImages.length;
@@ -30,7 +38,7 @@ const darkMode = document.querySelector('.switcher')
 
 const characters = [{
         id: 'jerry',
-        name: 'Jerry Mouse',
+        name: 'Jerry',
         fullname: 'Jerry Mouse',
         species: 'Mouse',
         img: 'img/jerry_mouse.webp',
@@ -44,7 +52,8 @@ const characters = [{
     },
     {
         id: 'tom',
-        name: 'Thomas Jasper "Tom" Cat Sr.',
+        name: 'Tom',
+        fullname: 'Thomas Jasper "Tom" Cat Sr.',
         species: 'Cat',
         img: 'img/tom_cat.webp',
         gender: 'Male',
@@ -57,7 +66,8 @@ const characters = [{
     },
     {
         id: 'spike',
-        name: 'Spike Bulldog',
+        name: 'Spike',
+        fullname: 'Spike Bulldog',
         species: 'Dog',
         img: 'img/spike_bulldog.webp',
         gender: 'Male',
@@ -70,7 +80,8 @@ const characters = [{
     },
     {
         id: 'tyke',
-        name: 'Tyke Bulldog',
+        name: 'Tyke',
+        fullname: 'Tyke Bulldog',
         species: 'Dog',
         img: 'img/tyke_bulldog.webp',
         gender: 'Male',
@@ -83,7 +94,8 @@ const characters = [{
     },
     {
         id: 'nibbles',
-        name: 'Nibbles Mouse',
+        name: 'Nibbles',
+        fullname: 'Nibbles Mouse',
         species: 'Mouse',
         img: 'img/nibbles_mouse.webp',
         gender: 'Male',
@@ -96,7 +108,8 @@ const characters = [{
     },
     {
         id: 'mammy',
-        name: 'Mammy Two Shoes aka "Dinah"',
+        name: 'Mammy Two Shoes',
+        fullname: 'Mammy Two Shoes aka "Dinah"',
         species: 'Human',
         img: 'img/mammy_two_shoes.webp',
         gender: 'Female',
@@ -109,7 +122,8 @@ const characters = [{
     },
     {
         id: 'uncle',
-        name: 'Uncle Pecos Mouse',
+        name: 'Uncle Pecos',
+        fullname: 'Uncle Pecos Mouse',
         species: 'Mouse',
         img: 'img/uncle_pecos.webp',
         gender: 'Male',
@@ -122,7 +136,8 @@ const characters = [{
     },
     {
         id: 'toodles',
-        name: 'Uncle Pecos Mouse',
+        name: 'Toodles Galore',
+        fullname: 'Toodles Galore',
         species: 'Cat',
         img: 'img/toodles_galore.webp',
         gender: 'Female',
@@ -134,3 +149,28 @@ const characters = [{
         text: 'Toodles Galore (also known as Toots in Tom and Jerry in New York) is a character in the Tom and Jerry series. She has white fur, wears a neck ribbon, and is considered attractive by other characters. Prior to her debut in the Tom and Jerry short Springtime for Thomas (1946), a white female cat resembling a prototype version of Toodles previously appeared (alongside a black alley cat resembling a prototype version of Butch Cat) in the one-shot MGM cartoon The Alley Cat (1941) directed by Hugh Harman. A character model sheet for the short refers to her as "The Lady Cat".'
     }
 ]
+
+
+menu.onclick = function(event) {    
+  let target = event.target; // де відбувся клік?
+  if (target.tagName != 'A') return; // не на TD? Тоді нас не цікавить
+  highlight(target); // виділити
+
+  characterId = event.target.getAttribute('id');
+  //console.log(characterId);
+  chosen = characters.filter(char => char.id === characterId)[0];
+  //console.log(chosen);
+  mainName.innerHTML = chosen.name;
+  mainImage.setAttribute('src', chosen.img);
+  mainImage.setAttribute('alt', chosen.alt);
+};
+
+function highlight(a) {
+  if (selectedA) {
+    selectedA.classList.remove('highlight');
+  }
+  selectedA = a;
+  selectedA.classList.add('highlight');
+}
+
+
