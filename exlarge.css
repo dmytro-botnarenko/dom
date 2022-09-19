@@ -93,37 +93,13 @@
 
   .main__info__strip {
     display: flex;
-    flex: 1 1 auto;
-    /*border: 1px solid;*/
+    flex: 0 0 auto;
+/*    border: 1px solid;*/
     align-items: center;
-  }
-  .main__info__strip__link_1 {
-    flex: calc(550/700);
-  }
-  .main__info__strip__link_2 {
-    flex: calc(550/611);
-  }
-  .main__info__strip__link_3 {
-    flex: calc(550/700);
-  }
-  .main__info__strip__link_4 {
-    flex: calc(550/700);
-  }
-  .main__info__strip__link_5 {
-    flex: calc(550/700);
-  }
-  .main__info__strip__link_6 {
-    flex: calc(550/700);
-  }
-  .main__info__strip__link_7 {
-    flex: calc(550/700);
-  }
-  .main__info__strip__link_8 {
-    flex: calc(550/700);
+    margin-top: 15px;
   }
   .main__info__strip__link__image {
-    width: 100%;
+    width: 80%;
     height: auto;
-    padding: 0 30px;
   }
 }

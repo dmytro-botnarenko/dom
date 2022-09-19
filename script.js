@@ -5,18 +5,17 @@ const body = document.body;
 const modeSwitcher = document.querySelector('.switcher');
 const modeSwitcherImage = document.querySelector('.switcher__image');
 const menu = document.querySelector('.main__navigation__menu__list');
+const menuStrip = document.querySelector('.main__info__strip');
 const modeImages = ["img/moon-icon.svg", "img/sun-icon.svg"];
 const burger = document.querySelectorAll('.main__navigation__menu__burger');
-const table = document.querySelector('table');
+//const table = document.querySelector('table');
 const mainName = document.querySelector('.main__info__name');
 const mainImage = document.querySelector('.main__info__image');
 const mainText = document.querySelector('.main__info__text');
 const mainTable = document.querySelectorAll('td');
 
 let selectedA;
-let characterId;
 let modeCounter = 0;
-let chosen;
 
 function changeModeImg() {
     modeCounter = (modeCounter + 1) % modeImages.length;
@@ -156,24 +155,19 @@ const characters = [{
 
 menu.onclick = function(event) {    
   let target = event.target; // де відбувся клік?
-  if (target.tagName != 'A') return; // не на TD? Тоді нас не цікавить
-  highlight(target); // виділити
+  if (target.tagName != 'A') return; // не на <a>? Тоді нас не цікавить
+  highlight(target); // виділити 
 
-  characterId = event.target.getAttribute('id');
-  //console.log(characterId);
-  chosen = characters.filter(char => char.id === characterId)[0];
-  //console.log(chosen);
-  mainName.innerHTML = chosen.name;
-  mainImage.setAttribute('src', chosen.img);
-  mainImage.setAttribute('alt', chosen.alt);
-  mainText.innerHTML = chosen.text;
-    for (const entry of mainTable.values()) {
-      let tdId = entry.id;
-      //console.log('id of td = ' + tdId);
-      //console.log('param of chosen = ' + chosen[tdId]);
-      entry.innerHTML = chosen[tdId];
-    }
-};
+  let characterId = event.target.getAttribute('id');
+  switchData(characterId);
+}
+
+menuStrip.onclick = function(event) {
+    let target = event.target.closest('a'); // де відбувся клік?
+    if (!target) return;
+    let characterId = event.target.getAttribute('id').slice(1);
+    switchData(characterId);
+}
 
 function highlight(a) {
   if (selectedA) {
@@ -183,4 +177,14 @@ function highlight(a) {
   selectedA.classList.add('highlight');
 }
 
-
+function switchData(characterId) {
+    let chosen = characters.filter(char => char.id === characterId)[0];
+    mainName.innerHTML = chosen.name;
+    mainImage.setAttribute('src', chosen.img);
+    mainImage.setAttribute('alt', chosen.alt);
+    mainText.innerHTML = chosen.text;
+    for (const entry of mainTable.values()) {
+      let tdId = entry.id;
+      entry.innerHTML = chosen[tdId];
+    }
+}
