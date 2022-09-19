@@ -29,7 +29,7 @@
     transition: transform 0.5s;
   }
   .main__navigation__menu__list__link {
-    font-size: 1.4em;
+    font-size: 1.4rem;
   }
   .main__navigation__menu input {
     display: block;
@@ -91,10 +91,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    padding-top: 10%;
   }
+
   .main__info__name {
-      flex: 0 1 auto;
-      padding: 13% 0 3% 0;
+      /*flex: 0 1 auto;*/
+      padding: 0 0 3% 0;
     }
 .main__info__personage {
     flex: 0 1 auto;
@@ -103,12 +105,15 @@
     justify-content: space-around;
     align-items: center;
 }
-.main__info__image{
-  /* border: 1px solid gray; */
+.main__info__figure {
   width: 50%;
 }
+
 .main__info__personage table {
   width: 80%;
+}
+.main__info__personage table caption {
+  display: none;
 }
 .main__info__text {
     padding: 3%;

@@ -1,6 +1,6 @@
 @media screen and (min-width: 461px) and (max-width: 768px) and (not (orientation: landscape)) {
   body {
-    /* background-color: lime; */
+     /*background-color: lime; */
   }
   /* ------------SWITCHER--------------- */
   .switcher {
@@ -12,7 +12,6 @@
   }
   /* ------------NAVIGATION--------------- */
   .main__navigation {
-    /* flex: 1 0 auto; */
     flex-direction: column;
     align-items: center;
     height: 90%;
@@ -26,23 +25,18 @@
     background-color: rgb(244, 165, 148);
     border-radius: 5px;
   }
-  .main__navigation__menu__list__link {
-    font-size: 1.4em;
-  }
   .main__navigation__menu__list h2,
   .main__navigation__menu__list__link {
-
+    font-size: 1.2rem;
   }
   /* ------------MAIN--------------- */
   .main__info {
-      flex: 1 1 auto;
       width: 70%;
       flex-direction: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: center;
     }
   .main__info__personage {
-      flex: 0 0 auto;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -50,10 +44,9 @@
   .main__info__name {
       margin-bottom: 0;
     }
-  .main__info__image {
+  .main__info__figure {
       margin-top: 3%;
       margin-bottom: 3%;
-      /* border: 1px solid gray; */
       width: 50%;
     }
   .main__info__text {

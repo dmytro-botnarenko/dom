@@ -83,8 +83,14 @@ nav {
 
 .main__info {
     display: flex;
+    padding-top: 5%;
 }
-
+.main__info__figure__image,
+.main__info__figure__caption {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
 .main__info__text {
     text-align: justify;
 }
