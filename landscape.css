@@ -1,103 +1,9 @@
-@media screen and (max-width: 766px) and (orientation: landscape) {
-  .main__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
+@media screen and (min-width: 461px) and (max-width: 1024px) and (orientation: landscape) {
   /* ------------SWITCHER--------------- */
   .switcher {
-    /* border: 1px solid black; */
-    /* display: inline-block; */
     width: 4%;
-    top: 5px;
+    top: 10px;
     left: 15px;
-  }
-  /* ------------NAVIGATION--------------- */
-  .main__navigation {
-    position: absolute;
-    top: 0;
-    left: 90%;
-    display: block;
-  }
-  .main__navigation__image {
-    display: none;
-  }
-  .main__navigation__menu__list {
-    position: absolute;
-    top: 0px;
-    width: 380px;
-    padding: 15% 2%;
-    border-radius: 5px;
-    background-color: rgba(244, 165, 148, 0.95);
-    transform: translate(30%, 0);
-    transition: transform 0.5s;
-    display: grid;
-    grid-template: auto / 1fr 1fr;
-  }
-  .main__navigation__menu__list h2 {
-  grid-column: 1 / 3;
-}
-  .main__navigation__menu__list__link {
-    font-size: 1.1rem;
-  }
-  .main__navigation__menu__list h2,
-  .main__navigation__menu__list__link {
-    margin-bottom: 10px;
-  }
-  .main__navigation__menu input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    cursor: pointer;
-    z-index: 2;
-    position: absolute;
-    top: 7px;
-    left: 0;
-    appearance: none;
-    -webkit-tap-highlight-color: transparent;
-    /* opacity: 0.5; */
-  }
-  .main__navigation__menu input:checked ~ .main__navigation__menu__list {
-    transform: translate(-79%, 0);
-  }
-  /*Hamburger*/
-  .main__navigation__menu__burger
-  {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    border-radius: 3px;
-    border: solid 2px;
-    position: relative;
-    z-index: 1;
-    color: black;
-    background-color: black;
-    transform-origin: 4px 0px;
-    top: 8px;
-    left: -6px;
-    transition: transform 0.5s,
-                opacity 0.55s;
-  }
-.main__navigation__menu__burger:first-child {
-    transform-origin: 0% 0%;
-  }
-.main__navigation__menu__burger:nth-of-type(3) {
-    transform-origin: 0% 100%;
-  }
-  /*Transform all the slices of hamburger into a crossmark*/
-.main__navigation__menu input:checked ~ .main__navigation__menu__burger {
-    opacity: 1;
-    transform: rotate(45deg) translate(0px, 0px);
-  }
-  /*But let's hide the middle one.*/
-.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(2) {
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-  }
-  /*last one should go the other direction*/
-.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
-    transform: rotate(-45deg) translate(0, 2px);
   }
   /* ------------MAIN--------------- */
   .main__info {
@@ -105,50 +11,31 @@
       flex-wrap: wrap;
       align-items: center;
     }
-    .main__info__name {
+  .main__info__name {
         width: 100%;
         text-align: center;
         padding: 0 0 1% 0;
         font-size: 2rem;
       }
   .main__info__personage {
-      /* flex: 1 1 auto; */
-      display: flex;
+      flex-direction: row;
       justify-content: space-around;
-      align-items: center;
-      width: 50%;
+      width: 60%;
   }
   .main__info__figure {
-    /* border: 1px solid gray; */
     width: 40%;
   }
   .main__info__personage table {
     width: 50%;
   }
+  .main__info__personage table caption {
+  display: none;
+  }
   .main__info__text {
-      width: 50%;
-      padding: 0 1% 0 0;
+      width: 40%;
+      padding: 0 3% 0 0;
       margin: 0;
     }
-    footer {
-      margin-top: 1%;
-    }
-}
-@media screen and (min-width: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  body {
-    /* background-color: crimson; */
-  }
-  .main__container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  /* ------------SWITCHER--------------- */
-  .switcher {
-    width: 4%;
-    top: 5px;
-    left: 15px;
-  }
   /* ------------NAVIGATION--------------- */
   .main__navigation {
     position: absolute;
@@ -173,7 +60,7 @@
   }
   .main__navigation__menu__list h2 {
   grid-column: 1 / 3;
-}
+  }
   .main__navigation__menu__list__link {
     font-size: 1.1rem;
   }
@@ -192,7 +79,6 @@
     left: 0;
     appearance: none;
     -webkit-tap-highlight-color: transparent;
-    /* opacity: 0.5; */
   }
   .main__navigation__menu input:checked ~ .main__navigation__menu__list {
     transform: translate(-79%, 0);
@@ -211,68 +97,60 @@
     color: black;
     background-color: black;
     transform-origin: 4px 0px;
-    top: 8px;
+    top: 13px;
     left: -6px;
     transition: transform 0.5s,
                 opacity 0.55s;
   }
-.main__navigation__menu__burger:first-child {
+  .main__navigation__menu__burger:first-child {
     transform-origin: 0% 0%;
   }
-.main__navigation__menu__burger:nth-of-type(3) {
+  .main__navigation__menu__burger:nth-of-type(3) {
     transform-origin: 0% 100%;
   }
-  /*Transform all the slices of hamburger into a crossmark*/
-.main__navigation__menu input:checked ~ .main__navigation__menu__burger {
+  .main__navigation__menu input:checked ~ .main__navigation__menu__burger {
     opacity: 1;
     transform: rotate(45deg) translate(0px, 0px);
   }
-  /*But let's hide the middle one.*/
-.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(2) {
+  .main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(2) {
     opacity: 0;
     transform: rotate(0deg) scale(0.2, 0.2);
   }
-  /*last one should go the other direction*/
-.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
+  .main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
     transform: rotate(-45deg) translate(0, 2px);
   }
-
-/* ------------MAIN--------------- */
-.main__info {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    /* flex: 1 1 auto;
-    width: 70%; */
-    /* max-height: 95%; */
-  }
-  .main__info__name {
-      width: 100%;
-      text-align: center;
-      padding-bottom: 8%;
-      font-size: 2em;
-    }
-.main__info__personage {
-    flex: 1 1 auto;
-    display: flex;
-      /* flex-direction: row;
-      flex-wrap: wrap; */
-    justify-content: space-around;
-    width: 50%;
-}
-.main__info__figure {
-  /* border: 1px solid gray; */
-  width: 40%;
-}
-.main__info__personage table {
-  width: 50%;
-}
-.main__info__text {
-    width: 45%;
-    padding: 0 1% 0 0;
-    margin: 0;
-  }
+  /* ------------FOOTER--------------- */
   footer {
     margin-top: 1%;
+  }
+}
+
+
+@media screen and (min-width: 461px) and (max-width: 768px) and (orientation: landscape) {
+  /* ------------SWITCHER--------------- */
+  .switcher {
+    top: 10px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
+  .main__container {
+    align-items: center;
+  }
+  /* ------------SWITCHER--------------- */
+  .switcher {
+    top: 15px;
+  }
+  /* ------------NAVIGATION--------------- */
+  .main__navigation__menu__list {
+    width: 420px;
+  }
+  .main__navigation__menu input {
+    top: 15px;
+    left: -10px;
+  }
+  /*Hamburger*/
+  .main__navigation__menu__burger {
+    top: 22px;
   }
 }

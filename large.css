@@ -49,12 +49,7 @@
     align-items: center;
   }
   .main__info__personage {
-      /* flex: 0 1 auto; */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: space-around;
-      /* max-height: 70%; */
   }
   .main__info__figure {
       /* border: 1px solid gray; */

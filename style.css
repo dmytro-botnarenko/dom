@@ -25,33 +25,19 @@ a {
 li {
     list-style: none;
 }
-
-main,
-footer,
-header,
-.main__container,
-.main__info__name,
-.main__info__personage {
-    /*border: 1px solid;*/
-}
-
-
 footer {
     text-align: center;
 }
-
 nav {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
 }
-
 .main__navigation__menu__list__link {
     display: block;
     border-radius: 5%;
     background-color: rgb(157, 36, 58);
 }
-
 /* ------------------------------- */
 .wrapper {
     display: flex;
@@ -60,8 +46,7 @@ nav {
     height: 100%;
     position: relative;
 }
-
-/* ------------HEADER--------------- */
+/* ------------SWITCHER--------------- */
 .switcher {
     cursor: pointer;
     background-color: rgb(252, 233, 136);
@@ -69,22 +54,23 @@ nav {
     z-index: 10;
     -webkit-tap-highlight-color: transparent;
 }
-
 .switcher__image {
     max-width: 100%;
 }
-
 /* -------------MAIN------------- */
 .main__container {
     flex: 1 1 auto;
     display: flex;
-    position: relative;
 }
-
 .main__info {
     display: flex;
     padding-top: 5%;
 }
+.main__info__personage {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
 .main__info__figure__image,
 .main__info__figure__caption {
   display: block;
@@ -94,36 +80,29 @@ nav {
 .main__info__text {
     text-align: justify;
 }
-
 .main__info__strip {
     display: none;
 }
-
 /* -----------TABLE---------------- */
 th,
 td {
     border: solid 1px;
     text-align: center;
 }
-
 .main__info__personage table {
     width: 80%;
 }
-
 /* ------------NAVIGATION--------------- */
 .main__navigation {
     width: 30%;
     align-self: center;
     text-align: center;
-    margin: 0 auto;
     display: flex;
 }
-
 .main__navigation__image {
     border-radius: 50%;
     max-width: 80%;
 }
-
 .main__navigation__menu {}
 
 .main__navigation__menu__list {}
@@ -135,23 +114,20 @@ td {
     transition: color 0.3s ease;
     -webkit-tap-highlight-color: transparent;
 }
-
 .main__navigation__menu__list h2 {
     text-transform: uppercase;
 }
-
 .main__navigation__menu__list__link:hover {
     color: rgb(252, 233, 136);
 }
-
 .main__navigation__menu input,
 .main__navigation__menu__burger {
     display: none;
 }
-
 /* ------------FOOTER--------------- */
-footer {}
-
+footer {
+    align-self: center;
+}
 .tooltip {
     cursor: pointer;
     position: relative;
@@ -159,7 +135,6 @@ footer {}
     margin-bottom: 1%;
     border-bottom: 1px dotted black;
 }
-
 .tooltip__text {
     visibility: hidden;
     width: calc(100% + 120px);
@@ -179,8 +154,6 @@ footer {}
     opacity: 0;
     transition: opacity 0.3s;
 }
-
-/* Tooltip arrow */
 .tooltip__text::after {
     content: "";
     position: absolute;
@@ -191,9 +164,116 @@ footer {}
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-
-/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltip__text {
     visibility: visible;
     opacity: 1;
+}
+
+@media screen and (max-width: 460px) {
+  /* ------------SWITCHER--------------- */
+  .switcher {
+    width: 8%;
+    top: 10px;
+    left: 10px;
+  }
+/* ------------MAIN--------------- */
+.main__info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10%;
+  }
+  .main__info__name {
+      padding: 0 0 3% 0;
+    }
+.main__info__personage {
+    justify-content: space-around;
+}
+.main__info__figure {
+  width: 50%;
+}
+.main__info__personage table {
+  width: 80%;
+}
+.main__info__personage table caption {
+  display: none;
+}
+.main__info__text {
+    padding: 3%;
+  }
+  /* ------------NAVIGATION--------------- */
+  .main__navigation {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    width: 50%;
+  }
+  .main__navigation__image {
+    display: none;
+  }
+  .main__navigation__menu__list {
+    position: absolute;
+    top: 45px;
+    width: 300px;
+    padding: 50px 50px;
+    background-color: rgba(244, 165, 148, 0.95);
+    border-radius: 5px;
+    transform: translate(30%, 0);
+    transition: transform 0.5s;
+  }
+  .main__navigation__menu__list__link {
+    font-size: 1.4rem;
+  }
+  .main__navigation__menu input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    top: 7px;
+    left: -16px;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .main__navigation__menu input:checked ~ .main__navigation__menu__list {
+    transform: translate(-85%, 0);
+  }
+  /*Hamburger*/
+  .main__navigation__menu__burger
+  {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+    border: solid 2px;
+    position: relative;
+    z-index: 1;
+    color: black;
+    background-color: black;
+    transform-origin: 4px 0px;
+    top: 13px;
+    left: -11px;
+    transition: transform 0.5s,
+                opacity 0.55s;
+  }
+.main__navigation__menu__burger:first-child {
+    transform-origin: 0% 0%;
+  }
+.main__navigation__menu__burger:nth-of-type(3) {
+    transform-origin: 0% 100%;
+  }
+.main__navigation__menu input:checked ~ .main__navigation__menu__burger {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+  /*But let's hide the middle one.*/
+.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+.main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
+    transform: rotate(-45deg) translate(0px, 2px);
+  }
 }

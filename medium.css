@@ -36,11 +36,6 @@
       align-items: center;
       justify-content: center;
     }
-  .main__info__personage {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
   .main__info__name {
       margin-bottom: 0;
     }

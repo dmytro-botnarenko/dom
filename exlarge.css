@@ -1,7 +1,4 @@
 @media screen and (min-width: 1025px) {
-  body {
-    /* background-color: violet; */
-  }
   /* ------------SWITCHER--------------- */
   .switcher {
     /* border: 1px solid black; */
@@ -54,10 +51,8 @@
     }
     .main__info__personage {
         flex: 1 1 auto;
-        display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
         width: 100%;
     }
     .main__info__figure {
