@@ -4,7 +4,7 @@
   }
   /* ------------SWITCHER--------------- */
   .switcher {
-    width: 7%;
+    width: 8%;
     top: 10px;
     left: 10px;
   }
@@ -94,7 +94,7 @@
   }
   .main__info__name {
       flex: 0 1 auto;
-      padding: 3% 0;
+      padding: 13% 0 3% 0;
     }
 .main__info__personage {
     flex: 0 1 auto;

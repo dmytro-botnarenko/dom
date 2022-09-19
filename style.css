@@ -32,7 +32,9 @@ header,
 .main__container,
 .main__info__name,
 .main__info__personage {
+    /*border: 1px solid;*/
 }
+
 
 footer {
     text-align: center;
@@ -59,7 +61,7 @@ nav {
     position: relative;
 }
 
-/* ------------SWITCHER--------------- */
+/* ------------HEADER--------------- */
 .switcher {
     cursor: pointer;
     background-color: rgb(252, 233, 136);
@@ -154,7 +156,7 @@ footer {}
 
 .tooltip__text {
     visibility: hidden;
-    width: calc(100% + 100px);
+    width: calc(100% + 120px);
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -165,7 +167,7 @@ footer {}
     position: absolute;
     z-index: 1;
     bottom: 125%;
-    left: -30%;
+    left: -40%;
 
     /* Fade in tooltip */
     opacity: 0;
