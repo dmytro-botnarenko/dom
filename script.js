@@ -10,6 +10,9 @@ const burger = document.querySelectorAll('.main__navigation__menu__burger');
 const table = document.querySelector('table');
 const mainName = document.querySelector('.main__info__name');
 const mainImage = document.querySelector('.main__info__image');
+const mainText = document.querySelector('.main__info__text');
+const mainTable = document.querySelectorAll('td');
+
 let selectedA;
 let characterId;
 let modeCounter = 0;
@@ -76,7 +79,7 @@ const characters = [{
         dislikes: 'Cats, Being disturbed, Noise',
         source: 'Image from https://hero.fandom.com/wiki/Spike_Bulldog',
         alt: 'Spike Bulldog',
-        text: 'In his very first appearance, Dog Trouble, Spike is the main antagonist, chasing and attacking both Tom and Jerry on sight, even trying to eat Jerry, which forced the two to work together to defeat him. In all subsequent shorts, Spike becomes typecast as the stereotypical dumb brute who is always duped into becoming a shield for Jerry from Tom. It is only in two episodes where Jerry gets Spike out of a jam and the dog willingly protects him from Tom in well-earned gratitude. On most occasions, Jerry causes trouble for Tom by luring him near Spike and harming him to get him angry, and in some cartoons when its perfectly obvious that Tom is not responsible, as seen in The Invisible Mouse, Spike still blames Tom and hurts him instead of Jerry.'
+        text: 'In his very first appearance, Dog Trouble, Spike is the main antagonist, chasing and attacking both Tom and Jerry on sight, even trying to eat Jerry, which forced the two to work together to defeat him. In all subsequent shorts, Spike becomes typecast as the stereotypical dumb brute who is always duped into becoming a shield for Jerry from Tom. It is only in two episodes where Jerry gets Spike out of a jam and the dog willingly protects him from Tom in well-earned gratitude. On most occasions, Jerry causes trouble for Tom by luring him near Spike and harming him to get him angry, and in some cartoons when its perfectly obvious that Tom is not responsible, Spike still blames Tom and hurts him instead of Jerry.'
     },
     {
         id: 'tyke',
@@ -163,6 +166,13 @@ menu.onclick = function(event) {
   mainName.innerHTML = chosen.name;
   mainImage.setAttribute('src', chosen.img);
   mainImage.setAttribute('alt', chosen.alt);
+  mainText.innerHTML = chosen.text;
+    for (const entry of mainTable.values()) {
+      let tdId = entry.id;
+      //console.log('id of td = ' + tdId);
+      //console.log('param of chosen = ' + chosen[tdId]);
+      entry.innerHTML = chosen[tdId];
+    }
 };
 
 function highlight(a) {
