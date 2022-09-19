@@ -1,56 +1,35 @@
 @media screen and (min-width: 461px) and (max-width: 768px) and (not (orientation: landscape)) {
-  body {
-     /*background-color: lime; */
+  /*body {
+     background-color: lime; 
+  }*/
+  /* ------------MAIN--------------- */
+  .main__info {
+    width: 70%;
   }
-  /* ------------SWITCHER--------------- */
-  .switcher {
-    /* border: 1px solid black; */
-    /* display: inline-block; */
-    width: 5%;
-    top: 15px;
-    left: 15px;
+  .main__info__name {
+    margin-bottom: 0;
+  }
+  .main__info__figure {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 50%;
+  }
+  .main__info__text {
+    margin-top: 0;
+    padding: 5%;
+    font-size: 1.1rem;
+  }
+  .main__info__personage table caption {
+    padding-bottom: 2%;
   }
   /* ------------NAVIGATION--------------- */
   .main__navigation {
-    flex-direction: column;
-    align-items: center;
     height: 90%;
-    justify-content: space-around;
   }
   .main__navigation__menu {
     width: 85%;
   }
   .main__navigation__menu__list {
     padding: 10% 2% 1% 2%;
-    background-color: rgb(244, 165, 148);
-    border-radius: 5px;
   }
-  .main__navigation__menu__list h2,
-  .main__navigation__menu__list__link {
-    font-size: 1.2rem;
-  }
-  /* ------------MAIN--------------- */
-  .main__info {
-      width: 70%;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  .main__info__name {
-      margin-bottom: 0;
-    }
-  .main__info__figure {
-      margin-top: 3%;
-      margin-bottom: 3%;
-      width: 50%;
-    }
-  .main__info__text {
-      margin-top: 0;
-      padding: 5%;
-      font-size: 1.2em;
-    }
-  .main__info__personage table caption {
-      font-size: 1.4em;
-      padding-bottom: 2%;
-    }
 }

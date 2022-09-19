@@ -1,70 +1,40 @@
 @media screen and (min-width: 769px) and (max-width: 1024px) and (not (orientation: landscape)) {
-  body {
-    /* background-color: olive; */
-  }
-/* ------------SWITCHER--------------- */
-  .switcher {
-    /* border: 1px solid black; */
-    /* display: inline-block; */
-    width: 5%;
-    top: 15px;
-    left: 15px;
-  }
-  /* ------------NAVIGATION--------------- */
-  .main__navigation {
-    width: 25%;
-    flex-direction: column;
-    align-items: center;
-    height: 90%;
-    justify-content: space-around;
-  }
-  .main__navigation__menu {
-    width: 95%;
-  }
-  .main__navigation__menu__list {
-    padding: 10% 2% 1% 2%;
-    background-color: rgb(244, 165, 148);
-    border-radius: 3%;
-  }
-  .main__navigation__menu__list__link {
-    font-size: 1.4em;
-  }
-  .main__navigation__menu__list h2,
-  .main__navigation__menu__list__link {
-    margin-bottom: 15%;
-  }
+  /*body {
+     background-color: olive; 
+  }*/
   /* ------------MAIN--------------- */
   .main__info {
     width: 70%;
-    height: 90%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
   }
   .main__info__name {
-    font-size: 3em;
-    flex: 1 1 auto;
+    font-size: 2.5rem;
     padding: 6% 0 5% 0;
-    display: flex;
-    align-items: center;
-  }
-  .main__info__personage {
-      justify-content: space-around;
   }
   .main__info__figure {
-      /* border: 1px solid gray; */
-      /* width: 30%; */
       max-width: 75%;
     }
     .main__info__text {
         margin-top: 0;
         padding: 5%;
-        font-size: 1.2em;
+        font-size: 1.2rem;
       }
     .main__info__personage table caption {
-        font-size: 1.4em;
         padding: 3% 0;
       }
+  /* ------------NAVIGATION--------------- */
+  .main__navigation {
+    height: 90%;
+  }
+  .main__navigation__menu {
+    width: 90%;
+  }
+  .main__navigation__menu__list {
+    width: 90%;
+    padding: 10% 2% 1% 2%;
+    background-color: rgb(244, 165, 148);
+    border-radius: 3%;
+  }
+  
 }
 @media screen and (min-width: 769px)
 and (max-width: 1024px)
@@ -104,10 +74,6 @@ and (not (orientation: landscape)) {
       border-radius: 50%;
       max-width: 40%;
       padding-bottom: 5%;
-    }
-
-    .main__navigation__menu__list__link {
-      font-size: 1.2em;
     }
     .main__navigation__menu__list h2,
     .main__navigation__menu__list__link {
