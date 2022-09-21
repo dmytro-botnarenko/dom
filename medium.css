@@ -1,35 +1,42 @@
-@media screen and (min-width: 461px) and (max-width: 768px) and (not (orientation: landscape)) {
-  /*body {
-     background-color: lime; 
-  }*/
+@media screen and (min-width: 461px) and (max-width: 1024px) and (not (orientation: landscape)) {
   /* ------------MAIN--------------- */
   .main__info {
     width: 70%;
   }
   .main__info__name {
-    margin-bottom: 0;
+    padding: 12px 0;
   }
   .main__info__figure {
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin: 16px 0;
     width: 50%;
-  }
-  .main__info__text {
-    margin-top: 0;
-    padding: 5%;
-    font-size: 1.1rem;
   }
   .main__info__personage table caption {
     padding-bottom: 2%;
   }
+  .main__info__text {
+    padding: 5%;
+    font-size: 1.1rem;
+  }
+}
   /* ------------NAVIGATION--------------- */
   .main__navigation {
     height: 90%;
   }
   .main__navigation__menu {
-    width: 85%;
+    width: 90%;
   }
   .main__navigation__menu__list {
     padding: 10% 2% 1% 2%;
   }
+
+@media screen and (min-width: 461px) and (max-width: 768px) and (not (orientation: landscape)) {
+  body {
+     background-color: lime; 
+  }
+  /* ------------MAIN--------------- */
+
+  /* ------------NAVIGATION--------------- */
+
+  
+  
 }

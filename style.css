@@ -62,13 +62,12 @@ nav {
 }
 /* -------------MAIN------------- */
 .main__container {
-    /*flex: 1 1 auto;*/
     display: flex;
+    padding-top: 40px;
 }
 .main__info {
     display: flex;
     flex-direction: column;
-    padding-top: 5%;
     justify-content: space-around;
     align-items: center;
 }
@@ -108,7 +107,7 @@ td {
     display: flex;
     flex-direction: column;
     width: 30%;
-    align-self: center;
+    /*align-self: center;*/
     text-align: center;
     align-items: center;
 }
@@ -193,6 +192,9 @@ footer {
         left: 10px;
     }
 /* ------------MAIN--------------- */
+    .main__container {
+    padding-top: 0;
+    }
     .main__info {
         padding-top: 10%;
     }
