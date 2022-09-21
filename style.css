@@ -82,6 +82,7 @@ nav {
   display: block;
   max-width: 100%;
   text-align: center;
+  max-height: 450px;
 }
 .main__info__text {
     text-align: justify;
@@ -107,7 +108,6 @@ td {
     display: flex;
     flex-direction: column;
     width: 30%;
-    /*align-self: center;*/
     text-align: center;
     align-items: center;
 }
@@ -183,35 +183,13 @@ footer {
     visibility: visible;
     opacity: 1;
 }
-
-@media screen and (max-width: 460px) {
-  /* ------------SWITCHER--------------- */
+@media screen and (max-width: 460px), 
+    (min-width: 461px) 
+    and (max-width: 1024px) 
+    and (orientation: landscape) {
+    /* ------------SWITCHER--------------- */
     .switcher {
-        width: 8%;
         top: 10px;
-        left: 10px;
-    }
-/* ------------MAIN--------------- */
-    .main__container {
-    padding-top: 0;
-    }
-    .main__info {
-        padding-top: 10%;
-    }
-    .main__info__name {
-        padding: 0 0 3% 0;
-    }
-    .main__info__figure {
-        width: 50%;
-    }
-    .main__info__personage table {
-        width: 80%;
-    }
-    .main__info__personage table caption {
-        display: none;
-    }
-    .main__info__text {
-        padding: 3%;
     }
     /* ------------NAVIGATION--------------- */
     .main__navigation {
@@ -219,22 +197,15 @@ footer {
         position: absolute;
         top: 0;
         left: 90%;
-        width: 50%;
     }
     .main__navigation__image {
         display: none;
     }
     .main__navigation__menu__list {
         position: absolute;
-        top: 45px;
-        width: 300px;
-        padding: 50px 50px;
         background-color: rgba(244, 165, 148, 0.95);
         transform: translate(30%, 0);
         transition: transform 0.5s;
-    }
-    .main__navigation__menu__list__link {
-        font-size: 1.4rem;
     }
     .main__navigation__menu input {
         display: block;
@@ -247,9 +218,6 @@ footer {
         left: -16px;
         appearance: none;
         -webkit-tap-highlight-color: transparent;
-    }
-    .main__navigation__menu input:checked ~ .main__navigation__menu__list {
-        transform: translate(-85%, 0);
     }
     /*Hamburger*/
     .main__navigation__menu__burger
@@ -287,4 +255,62 @@ footer {
     .main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
         transform: rotate(-45deg) translate(0px, 2px);
     }
+}
+
+
+@media screen and (max-width: 460px) {
+  /* ------------SWITCHER--------------- */
+    .switcher {
+        width: 8%;
+        left: 10px;
+    }
+/* ------------MAIN--------------- */
+    .main__container {
+    padding-top: 0;
+    }
+    .main__info {
+        padding-top: 10%;
+    }
+    .main__info__name {
+        padding: 0 0 3% 0;
+    }
+    .main__info__figure {
+        width: 50%;
+    }
+    .main__info__personage table {
+        width: 80%;
+    }
+    .main__info__personage table caption {
+        display: none;
+    }
+    .main__info__text {
+        padding: 3%;
+    }
+    /* ------------NAVIGATION--------------- */
+    
+    .main__navigation__menu__list {
+        top: 45px;
+        width: 300px;
+        padding: 50px 50px;
+    }
+    .main__navigation__menu__list h2 {
+        font-size: 1.6rem;
+        margin-bottom: 5%;
+    }
+    .main__navigation__menu__list li {
+        display: flex;
+        justify-content: center;
+    }
+    .main__navigation__menu__list__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.4rem;
+        width: 80%;
+        margin-bottom: 5%;
+        height: 2.5rem;
+    }
+    .main__navigation__menu input:checked ~ .main__navigation__menu__list {
+        transform: translate(-85%, 0);
+    }    
 }

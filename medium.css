@@ -1,4 +1,7 @@
-@media screen and (min-width: 461px) and (max-width: 1024px) and (not (orientation: landscape)) {
+@media screen 
+  and (min-width: 461px) 
+  and (max-width: 1024px) 
+  and (not (orientation: landscape)) {
   /* ------------MAIN--------------- */
   .main__info {
     width: 70%;
@@ -11,7 +14,7 @@
     width: 50%;
   }
   .main__info__personage table caption {
-    padding-bottom: 2%;
+    padding-bottom: 8px;
   }
   .main__info__text {
     padding: 5%;
@@ -28,15 +31,4 @@
   .main__navigation__menu__list {
     padding: 10% 2% 1% 2%;
   }
-
-@media screen and (min-width: 461px) and (max-width: 768px) and (not (orientation: landscape)) {
-  body {
-     background-color: lime; 
-  }
-  /* ------------MAIN--------------- */
-
-  /* ------------NAVIGATION--------------- */
-
-  
-  
 }

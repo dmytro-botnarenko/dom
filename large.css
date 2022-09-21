@@ -1,14 +1,7 @@
-@media screen and (min-width: 769px) and (max-width: 1024px) and (not (orientation: landscape)) {
-  
-
-}
 @media screen and (min-width: 769px)
 and (max-width: 1024px)
 and (max-height: 767px)
 and (not (orientation: landscape)) {
-  body {
-     background-color: olive; 
-  }
   .main__info__name {
     font-size: 2em;
     flex: 0 1 auto;
@@ -26,7 +19,6 @@ and (not (orientation: landscape)) {
   }
   .main__info__figure {
       border: 1px solid gray;
-      /* width: 30%; */
       max-width: 25%;
     }
     .main__info__text {
@@ -35,7 +27,7 @@ and (not (orientation: landscape)) {
         font-size: 1.1em;
       }
 
-      /* ---- NAVIGATION ----*/
+    /* ------------NAVIGATION--------------- */
     .main__navigation {
       justify-content: flex-start;
     }

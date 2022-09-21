@@ -1,42 +1,46 @@
 @media screen and (min-width: 1025px) {
-  /*body {
-     background-color: red; 
-  }*/
+  .wrapper {
+    padding: 2%;
+  }
   /* ------------SWITCHER--------------- */
   .switcher {
     width: 3%;
-    left: 20px;
+    top: 4%;
+    left: 2%;
   }
   /* ------------MAIN--------------- */
+  .main__container {
+    padding-top: 0;
+  }
   .main__info {
     width: 70%;
+    justify-content: flex-start;
+  }
+  .main__info__name {
+    font-size: 2.5rem;
+    padding: 20px 0;
+  }
+  .main__info__personage {
+    flex-direction: row;
+    width: 100%;
+  }
+  .main__info__figure {
+    max-width: 30%;
     }
-    .main__info__name {
-      font-size: 2.5rem;
-      padding: 2% 0 2% 0;
-    }
-    .main__info__personage {
-        flex-direction: row;
-        width: 100%;
-    }
-    .main__info__figure {
-      max-width: 30%;
-      align-self: center;
-    }
-    .main__info__personage table {
-      width: 50%;
-      height: 50%;
-    }
-    .main__info__text {
-      column-count: 2;
-      padding: 4% 2% 0 2%;
-    }
-    .main__info__personage table caption {
-        padding: 3% 0;
-      }
+  .main__info__personage table {
+    width: 50%;
+    height: 70%;
+  }
+  .main__info__personage table caption {
+    padding-bottom: 20px;
+  }
+  .main__info__text {
+    column-count: 2;
+    padding: 40px 25px 0 25px;
+  }
     /* ------------NAVIGATION--------------- */
   .main__navigation__menu {
-    width: 85%;
+    max-width: 700px;
   }
   .main__navigation__image {
     border-radius: 50%;
@@ -44,8 +48,6 @@
     padding-bottom: 5%;
   }
   .main__navigation__menu__list {
-    padding: 10% 2% 1% 2%;
-    background-color: rgb(244, 165, 148);
     border-radius: 3%;
   }
   .main__navigation__menu__list__link {
@@ -58,26 +60,38 @@
   }
 }
 
-
 @media screen and (min-width: 1600px) {
-  .wrapper {
-    padding: 2%;
+  .main__container {
+    height: 90%;
   }
-  .switcher {
-    width: 3%;
-    top: 4%;
-    left: 3%;
-  }
-
   .main__info__strip {
     display: flex;
-    flex: 0 0 auto;
-/*    border: 1px solid;*/
     align-items: center;
     margin-top: 15px;
   }
+  .main__info__strip li {
+    text-align: center;
+  }
   .main__info__strip__link__image {
     width: 80%;
-    height: auto;
+  }
+  footer {
+    height: 10px;
+  }
+}
+
+@media screen 
+  and (min-width: 1600px) 
+  and (max-height: 900px) {
+  .main__info__strip__link__image {
+    width: 50%;
+  }
+}
+@media screen and (min-height: 1440px) {
+  .main__info {
+    justify-content: space-around;
+  }
+  .main__navigation {
+    justify-content: center;
   }
 }
