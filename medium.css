@@ -1,7 +1,4 @@
-@media screen 
-  and (min-width: 461px) 
-  and (max-width: 1024px) 
-  and (not (orientation: landscape)) {
+@media screen and (min-width: 461px) and (max-width: 1024px) and (not (orientation: landscape)) {
   /* ------------MAIN--------------- */
   .main__info {
     width: 70%;
@@ -21,9 +18,7 @@
     font-size: 1.1rem;
   }
   /* ------------NAVIGATION--------------- */
-  /* .main__navigation {
-    height: 90%;
-  } */
+
   .main__navigation__menu {
     width: 90%;
     margin-top: 5%;

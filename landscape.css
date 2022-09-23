@@ -1,7 +1,4 @@
-@media screen 
-  and (min-width: 461px) 
-  and (max-width: 1024px) 
-  and (orientation: landscape) {
+@media screen and (min-width: 461px) and (max-width: 1024px) and (orientation: landscape) {
   /* ------------SWITCHER--------------- */
   .switcher {
     width: 4%;
@@ -9,19 +6,19 @@
   }
   /* ------------MAIN--------------- */
   .main__info {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
   .main__info__name {
-        width: 100%;
-        text-align: center;
-        padding: 0 0 1% 0;
-        font-size: 2rem;
-      }
+    width: 100%;
+    text-align: center;
+    padding: 0 0 1% 0;
+    font-size: 2rem;
+  }
   .main__info__personage {
-      flex-direction: row;
-      justify-content: space-around;
-      width: 60%;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 60%;
   }
   .main__info__figure {
     width: 40%;
@@ -30,15 +27,15 @@
     width: 50%;
   }
   .main__info__personage table caption {
-  display: none;
+    display: none;
   }
   .main__info__text {
-      width: 40%;
-      padding: 0 3% 0 0;
-      margin: 0;
-    }
+    width: 40%;
+    padding: 0 3% 0 0;
+    margin: 0;
+  }
   /* ------------NAVIGATION--------------- */
-  
+
   .main__navigation__menu input {
     left: 0;
   }
@@ -70,9 +67,7 @@
   }
 }
 
-@media screen and (min-width: 769px) 
-  and (max-width: 1024px) 
-  and (orientation: landscape) {
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
   .wrapper {
     justify-content: space-between;
   }
@@ -93,12 +88,7 @@
     width: 420px;
   }
 }
-@media screen 
-  and (min-width: 769px) 
-  and (max-width: 1024px) 
-  and (orientation: landscape)
-  and (min-height: 700px) {
-
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) and (min-height: 700px) {
   /* ------------SWITCHER--------------- */
   .switcher {
     top: 20px;
@@ -109,9 +99,9 @@
     padding: 30px;
   }
   .main__info__personage {
-      width: 100%;
+    width: 100%;
   }
   .main__info__text {
-      width: 100%;
+    width: 100%;
   }
 }
