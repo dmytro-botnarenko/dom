@@ -54,7 +54,7 @@
     font-size: 1.4em;
     padding: 2% 0;
   }
-  .main__navigation__menu__list h2,
+  .main__navigation__menu h2,
   .main__navigation__menu__list__link {
     margin-bottom: 3%;
   }
@@ -87,6 +87,7 @@
     width: 50%;
   }
 }
+
 @media screen and (min-height: 1440px) {
   .main__info {
     justify-content: space-around;

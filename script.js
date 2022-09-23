@@ -154,16 +154,15 @@ const characters = [{
 
 
 menu.onclick = function(event) {    
-  let target = event.target; // де відбувся клік?
-  if (target.tagName != 'A') return; // не на <a>? Тоді нас не цікавить
-  highlight(target); // виділити 
-
-  let characterId = event.target.getAttribute('id');
-  switchData(characterId);
+    let target = event.target.closest('a');
+    if (!target) return;
+    highlight(target);
+    let characterId = event.target.getAttribute('id');
+    switchData(characterId);
 }
 
 menuStrip.onclick = function(event) {
-    let target = event.target.closest('a'); // де відбувся клік?
+    let target = event.target.closest('a');
     if (!target) return;
     let characterId = event.target.getAttribute('id').slice(1);
     switchData(characterId);

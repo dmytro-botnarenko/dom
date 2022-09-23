@@ -36,7 +36,7 @@ and (not (orientation: landscape)) {
       max-width: 40%;
       padding-bottom: 5%;
     }
-    .main__navigation__menu__list h2,
+    .main__navigation__menu h2,
     .main__navigation__menu__list__link {
       margin-bottom: 5%;
     }

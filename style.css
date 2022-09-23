@@ -121,7 +121,7 @@ td {
     background-color: rgb(244, 165, 148);
     border-radius: 5px;
 }
-.main__navigation__menu__list h2,
+.main__navigation__menu h2,
 .main__navigation__menu__list__link {
     margin-bottom: 10%;
     color: black;
@@ -129,7 +129,7 @@ td {
     -webkit-tap-highlight-color: transparent;
     font-size: 1.2rem;
 }
-.main__navigation__menu__list h2 {
+.main__navigation__menu h2 {
     text-transform: uppercase;
 }
 .main__navigation__menu__list__link:hover {
@@ -293,7 +293,7 @@ footer {
         width: 300px;
         padding: 50px 50px;
     }
-    .main__navigation__menu__list h2 {
+    .main__navigation__menu h2 {
         font-size: 1.6rem;
         margin-bottom: 5%;
     }
