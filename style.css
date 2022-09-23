@@ -69,7 +69,8 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
+    text-align: center;
 }
 .main__info__personage {
     display: flex;
@@ -109,19 +110,16 @@ td {
     flex-direction: column;
     width: 30%;
     text-align: center;
-    align-items: center;
 }
 .main__navigation__image {
     border-radius: 50%;
     max-width: 80%;
 }
-.main__navigation__menu {}
-
-.main__navigation__menu__list {
+.main__navigation__menu__container {
     background-color: rgb(244, 165, 148);
     border-radius: 5px;
 }
-.main__navigation__menu h2,
+.main__navigation__menu__container h2,
 .main__navigation__menu__list__link {
     margin-bottom: 10%;
     color: black;
@@ -129,7 +127,7 @@ td {
     -webkit-tap-highlight-color: transparent;
     font-size: 1.2rem;
 }
-.main__navigation__menu h2 {
+.main__navigation__menu__container h2 {
     text-transform: uppercase;
 }
 .main__navigation__menu__list__link:hover {
@@ -158,13 +156,11 @@ footer {
     text-align: center;
     padding: 5px 5px;
     border-radius: 6px;
-
     /* Position the tooltip text */
     position: absolute;
     z-index: 1;
     bottom: 125%;
     left: -40%;
-
     /* Fade in tooltip */
     opacity: 0;
     transition: opacity 0.3s;
@@ -200,12 +196,6 @@ footer {
     }
     .main__navigation__image {
         display: none;
-    }
-    .main__navigation__menu__list {
-        position: absolute;
-        background-color: rgba(244, 165, 148, 0.95);
-        transform: translate(30%, 0);
-        transition: transform 0.5s;
     }
     .main__navigation__menu input {
         display: block;
@@ -255,8 +245,16 @@ footer {
     .main__navigation__menu input:checked ~ .main__navigation__menu__burger:nth-of-type(3) {
         transform: rotate(-45deg) translate(0px, 2px);
     }
+    .main__navigation__menu__container {
+        position: absolute;
+        background-color: rgba(244, 165, 148, 0.95);
+        transform: translate(30%, 0);
+        transition: transform 0.5s;
+    }
+    .main__navigation__menu input:checked ~ .main__navigation__menu__container {
+        transform: translate(-85%, 0);
+    }  
 }
-
 
 @media screen and (max-width: 460px) {
   /* ------------SWITCHER--------------- */
@@ -288,29 +286,22 @@ footer {
     }
     /* ------------NAVIGATION--------------- */
     
-    .main__navigation__menu__list {
+    .main__navigation__menu__container {
         top: 45px;
         width: 300px;
         padding: 50px 50px;
     }
-    .main__navigation__menu h2 {
+    .main__navigation__menu__container h2 {
         font-size: 1.6rem;
         margin-bottom: 5%;
-    }
-    .main__navigation__menu__list li {
-        display: flex;
-        justify-content: center;
     }
     .main__navigation__menu__list__link {
         display: flex;
         flex-direction: column;
         justify-content: center;
         font-size: 1.4rem;
-        width: 80%;
+        width: 100%;
         margin-bottom: 5%;
         height: 2.5rem;
-    }
-    .main__navigation__menu input:checked ~ .main__navigation__menu__list {
-        transform: translate(-85%, 0);
-    }    
+    }  
 }

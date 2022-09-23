@@ -2,6 +2,9 @@
 and (max-width: 1024px)
 and (max-height: 767px)
 and (not (orientation: landscape)) {
+  body {
+    background-color: red;
+  }
   .main__info__name {
     font-size: 2em;
     flex: 0 1 auto;

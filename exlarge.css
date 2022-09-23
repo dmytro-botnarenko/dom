@@ -13,7 +13,7 @@
     padding-top: 0;
   }
   .main__info {
-    width: 70%;
+    width: 75%;
     justify-content: flex-start;
   }
   .main__info__name {
@@ -39,8 +39,12 @@
     padding: 40px 25px 0 25px;
   }
     /* ------------NAVIGATION--------------- */
-  .main__navigation__menu {
-    max-width: 700px;
+  .main__navigation {
+    padding: 0 0 0 2%;
+    width: 25%;
+  }
+  .main__navigation__menu__container {
+    padding: 3%;
   }
   .main__navigation__image {
     border-radius: 50%;
@@ -88,7 +92,7 @@
   }
 }
 
-@media screen and (min-height: 1440px) {
+@media screen and (min-height: 1200px) {
   .main__info {
     justify-content: space-around;
   }
