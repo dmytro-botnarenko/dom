@@ -71,15 +71,15 @@ function highlight(a) {
 }
 
 function switchData(characterId) {
-  let chosen = characters.filter((char) => char.id === characterId)[0];
+  const chosen = characters.filter((character) => character.id === characterId)[0];
   mainName.innerHTML = chosen.name;
   mainImage.setAttribute("src", chosen.img);
   mainImage.setAttribute("alt", chosen.alt);
   mainImageCaptionLink.setAttribute("href", chosen.source);
   mainText.innerHTML = chosen.text;
   for (const entry of mainTable.values()) {
-    let tdId = entry.id;
-    entry.innerHTML = chosen[tdId];
+    let tableCell = entry.id;
+    entry.innerHTML = chosen[tableCell];
   }
 }
 
