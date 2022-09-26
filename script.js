@@ -13,6 +13,7 @@ const mainImage = document.querySelector(".main__info__figure__image");
 const mainImageCaptionLink = document.querySelector(".main__info__figure__caption__link");
 const mainText = document.querySelector(".main__info__text");
 const mainTable = document.querySelectorAll("td");
+const mainStripLinks = document.querySelectorAll(".main__info__strip__link");
 
 let selectedLink;
 let modeCounter = 0;
@@ -34,46 +35,53 @@ const darkMode = document
     rootElement.classList.toggle("dark-mode");
     body.classList.toggle("dark-mode");
     modeSwitcher.classList.toggle("dark-mode");
+    mainStripLinks.forEach(
+      (node) => {
+        node.classList.toggle("dark-strip-mode");
+      }
+    );
     menu.classList.toggle("antidark-mode");
     changeModeImg();
     changeBurgerMode();
   });
 
-  menu.onclick = function (event) {
-    const target = event.target.closest("a");
-    if (!target) return;
-    highlight(target);
-    let characterId = event.target.getAttribute("id");
-    switchData(characterId);
-  };
-  
-  menuStrip.onclick = function (event) {
-    const target = event.target.closest("a");
-    if (!target) return;
-    let characterId = event.target.getAttribute("id").slice(1);
-    switchData(characterId);
-  };
-  
-  function highlight(a) {
-    if (selectedLink) {
-      selectedLink.classList.remove("highlight");
-    }
-    selectedLink = a;
-    selectedLink.classList.add("highlight");
+menu.onclick = (event) => {
+  const target = event.target.closest("a");
+  if (!target)
+    return;
+  highlight(target);
+  let characterId = event.target.getAttribute("id");
+  switchData(characterId);
+};
+
+menuStrip.onclick = (event) => {
+  const target = event.target.closest("a");
+  if (!target)
+    return;
+  let characterId = event.target.getAttribute("id").slice(1);
+  switchData(characterId);
+};
+
+function highlight(a) {
+  if (selectedLink) {
+    selectedLink.classList.remove("highlight");
   }
-  
-  function switchData(characterId) {
-    let chosen = characters.filter((char) => char.id === characterId)[0];
-    mainName.innerHTML = chosen.name;
-    mainImage.setAttribute("src", chosen.img);
-    mainImage.setAttribute("alt", chosen.alt);
-    mainImageCaptionLink.setAttribute("href", chosen.source);
-    mainText.innerHTML = chosen.text;
-    for (const entry of mainTable.values()) {
-      let tdId = entry.id;
-      entry.innerHTML = chosen[tdId];
-    }
+  selectedLink = a;
+  selectedLink.classList.add("highlight");
+}
+
+function switchData(characterId) {
+  let chosen = characters.filter((char) => char.id === characterId)[0];
+  mainName.innerHTML = chosen.name;
+  mainImage.setAttribute("src", chosen.img);
+  mainImage.setAttribute("alt", chosen.alt);
+  mainImageCaptionLink.setAttribute("href", chosen.source);
+  mainText.innerHTML = chosen.text;
+  for (const entry of mainTable.values()) {
+    let tdId = entry.id;
+    entry.innerHTML = chosen[tdId];
   }
+}
 
 const characters = [
   {
@@ -189,4 +197,3 @@ const characters = [
     text: "Toodles Galore (also known as Toots in Tom and Jerry in New York) is a character in the Tom and Jerry series. She has white fur, wears a neck ribbon, and is considered attractive by other characters. Prior to her debut in the Tom and Jerry short Springtime for Thomas (1946), a white female cat resembling a prototype version of Toodles previously appeared (alongside a black alley cat resembling a prototype version of Butch Cat) in the one-shot MGM cartoon The Alley Cat (1941) directed by Hugh Harman. A character model sheet for the short refers to her as \"The Lady Cat\".",
   },
 ];
-

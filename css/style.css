@@ -78,12 +78,14 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
-.main__info__figure__image,
-.main__info__figure__caption {
+.main__info__figure__image {
   display: block;
   max-width: 100%;
   text-align: center;
   max-height: 450px;
+}
+.main__info__figure__caption {
+  padding: 5px 0;
 }
 .main__info__text {
   text-align: justify;

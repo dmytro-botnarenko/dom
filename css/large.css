@@ -27,6 +27,9 @@
   .main__info__figure {
     max-width: 30%;
   }
+  .main__info__figure__caption {
+    padding: 10px 0 0 0;
+  }
   .main__info__personage table {
     width: 50%;
     height: 70%;
@@ -75,11 +78,16 @@
   .main__info__strip li {
     text-align: center;
   }
+  .main__info__strip__link {
+    border-radius: 3px;
+    box-shadow: rgb(156, 15, 2) 0px 0px 0px 3px, rgb(244, 165, 148) 0px 0px 0px 6px, rgb(156, 15, 2) 0px 0px 0px 9px;
+    transition: background-color 0.55s;
+  }
+  .main__info__strip__link:hover {
+    background-color: rgb(156, 15, 2);
+  }
   .main__info__strip__link__image {
     width: 60%;
-    /* border-radius: 15%;
-    background-color: rgba(156, 15, 2);
-    padding: 5px; */
   }
   footer {
     height: 10px;
