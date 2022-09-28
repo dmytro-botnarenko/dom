@@ -61,18 +61,11 @@
   .main__navigation__menu__list__link {
     margin-bottom: 10px;
   }
-  /* ------------FOOTER--------------- */
-  footer {
-    margin-top: 1%;
-  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
   .wrapper {
     justify-content: space-between;
-  }
-  .main__container {
-    height: 90%;
   }
   /* ------------NAVIGATION------------- */
   .main__navigation__menu input {

@@ -65,15 +65,21 @@
   .main__navigation__menu__list__link {
     margin-bottom: 3%;
   }
+  /* ------------FOOTER--------------- */
+  footer {
+    height: 10px;
+  }
 }
 
 @media screen and (min-width: 1600px) {
-  .main__container {
-    height: 95%;
+  .main__info__text {
+    padding-bottom: 10px;
   }
   .main__info__strip {
     display: flex;
     margin-top: auto;
+    margin-bottom: 20px;
+    justify-content: space-around;
   }
   .main__info__strip li {
     text-align: center;
@@ -88,9 +94,6 @@
   }
   .main__info__strip__link__image {
     width: 60%;
-  }
-  footer {
-    height: 10px;
   }
 }
 
@@ -113,6 +116,12 @@
 }
 
 @media screen and (min-width: 3440px) {
+  .main__info__text {
+    align-self: center;
+    column-count: 2;
+    column-gap: 3rem;
+    width: 70%;
+  }
   .main__info__strip {
     margin-top: 50px;
   }
