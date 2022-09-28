@@ -18,6 +18,10 @@ body {
   background-color: rgb(252, 233, 136);
 }
 
+body {
+  scrollbar-gutter: stable both-edges;
+}
+
 a {
   text-decoration: none;
 }
