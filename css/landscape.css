@@ -46,13 +46,14 @@
   /*Menu list*/
   .main__navigation__menu__container {
     top: 0px;
-    width: 380px;
-    padding: 15% 2%;
+    width: 430px;
+    padding: 30px 10px;
   }
   .main__navigation__menu__list {
     display: grid;
     grid-template: auto / 1fr 1fr;
-    column-gap: 2%;
+    column-gap: 10px;
+    row-gap: 6px;
   }
   .main__navigation__menu__list__link {
     font-size: 1.1rem;

@@ -106,7 +106,7 @@
   }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (min-width: 1025px) and (min-height: 1200px) {
   .main__info {
     justify-content: space-around;
   }
