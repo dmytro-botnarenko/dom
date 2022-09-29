@@ -74,7 +74,9 @@
   }
   .main__info__strip__link {
     border-radius: 3px;
-    box-shadow: rgb(156, 15, 2) 0px 0px 0px 3px, rgb(244, 165, 148) 0px 0px 0px 6px, rgb(156, 15, 2) 0px 0px 0px 9px;
+    box-shadow: rgb(156, 15, 2) 0px 0px 0px 3px, 
+                rgb(244, 165, 148) 0px 0px 0px 6px, 
+                  rgb(156, 15, 2) 0px 0px 0px 9px;
     transition: background-color 0.55s;
   }
   .main__info__strip__link:hover {

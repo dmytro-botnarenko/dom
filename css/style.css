@@ -153,9 +153,7 @@ td {
   display: none;
 }
 /* ------------FOOTER--------------- */
-footer {
-  /* align-self: center; */
-}
+
 .tooltip {
   cursor: pointer;
   position: relative;

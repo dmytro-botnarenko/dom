@@ -4,8 +4,10 @@ const rootElement = document.documentElement;
 const body = document.body;
 const modeSwitcher = document.querySelector(".switcher");
 const modeSwitcherImage = document.querySelector(".switcher__image");
-const menu = document.querySelector(".main__navigation__menu__list");
-const menuStrip = document.querySelector(".main__info__strip");
+const menus = [
+  document.querySelector(".main__navigation__menu__list"), 
+  document.querySelector(".main__info__strip"),
+];
 const modeIcons = ["img/moon-icon.svg", "img/sun-icon.svg"];
 const burger = document.querySelectorAll(".main__navigation__menu__burger");
 const mainName = document.querySelector(".main__info__name");
@@ -17,6 +19,7 @@ const mainStripLinks = document.querySelectorAll(".main__info__strip__link");
 
 let selectedLink;
 let modeCounter = 0;
+
 
 function changeModeImg() {
   modeCounter = (modeCounter + 1) % modeIcons.length;
@@ -35,32 +38,24 @@ const darkMode = document
     rootElement.classList.toggle("dark-mode");
     body.classList.toggle("dark-mode");
     modeSwitcher.classList.toggle("dark-mode");
-    mainStripLinks.forEach(
-      (node) => {
+    mainStripLinks.forEach((node) => {
         node.classList.toggle("dark-strip-mode");
       }
     );
-    menu.classList.toggle("antidark-mode");
     changeModeImg();
     changeBurgerMode();
   });
 
-menu.onclick = (event) => {
-  const target = event.target.closest("a");
-  if (!target)
-    return;
-  highlight(target);
-  let characterId = event.target.getAttribute("id");
-  switchData(characterId);
-};
-
-menuStrip.onclick = (event) => {
-  const target = event.target.closest("a");
-  if (!target)
-    return;
-  let characterId = event.target.getAttribute("id").slice(1);
-  switchData(characterId);
-};
+menus.forEach(
+  (element) => 
+    (element.onclick = (event) => {
+      const target = event.target.closest("a");
+      if (!target) return;
+      highlight(target);
+      let characterId = event.target.getAttribute("id").slice(1);
+      switchData(characterId);
+    })
+);
 
 function highlight(a) {
   if (selectedLink) {
