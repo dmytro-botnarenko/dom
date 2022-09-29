@@ -1,7 +1,4 @@
 @media screen and (min-width: 1025px) {
-  .wrapper {
-    padding: 2%;
-  }
   /* ------------SWITCHER--------------- */
   .switcher {
     width: 3%;
@@ -9,12 +6,8 @@
     left: 2%;
   }
   /* ------------MAIN--------------- */
-  .main__container {
-    padding-top: 0;
-  }
   .main__info {
     width: 75%;
-    justify-content: flex-start;
   }
   .main__info__name {
     font-size: 2.5rem;
@@ -39,11 +32,10 @@
   }
   .main__info__text {
     column-count: 2;
-    padding: 40px 25px 0 25px;
+    padding: 2% 2% 0 0;
   }
   /* ------------NAVIGATION--------------- */
   .main__navigation {
-    padding: 0 0 0 2%;
     width: 25%;
   }
   .main__navigation__menu__container {
@@ -64,10 +56,6 @@
   .main__navigation__menu h2,
   .main__navigation__menu__list__link {
     margin-bottom: 3%;
-  }
-  /* ------------FOOTER--------------- */
-  footer {
-    height: 10px;
   }
 }
 
@@ -107,15 +95,22 @@
 }
 
 @media screen and (min-width: 1025px) and (min-height: 1200px) {
-  .main__info {
-    justify-content: space-around;
-  }
   .main__navigation {
     justify-content: center;
   }
 }
 
 @media screen and (min-width: 3440px) {
+  body {
+    font-size: calc(14px + 0.39vw);
+    line-height: calc(20px + 0.39vw);
+  }
+  .main__info__personage {
+    flex-grow: 1;
+  }
+  .main__info__figure__image {
+    max-height: 600px;
+  }
   .main__info__text {
     align-self: center;
     column-count: 2;
@@ -124,5 +119,8 @@
   }
   .main__info__strip {
     margin-top: 50px;
+  }
+  .main__info__strip__link__image {
+    width: 80%;
   }
 }
